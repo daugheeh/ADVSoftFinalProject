@@ -1,32 +1,38 @@
-#include <iostream>
-
-int main() {
-    int num1 = 10;
-    int num2 = 0;
-    
-    std::cout << "Enter a number: ";
-    std::cin >> num1;
-    
-    std::cout << "Enter another number: ";
-    std::cin >> num2;
-    
-    int result = num1 / num2; // Error 1: Division by zero
-    
-    std::cout << "Result: " << result << std::endl;
-    
-    int array[5];
-    array[6] = 42; // Error 2: Index out of bounds
-    
-    char* str = "Hello, World!"; // Error 3: Should be "const char* str"
-    
-    int* ptr = nullptr;
-    *ptr = 100; // Error 4: Dereferencing a nullptr
-    
-    for (int i = 0; i < 20; i++) {
-        std::cout << "Loop iteration: " << i << std::endl;
+public class FlawedCode2 {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+        
+        System.out.println("Sum: " + calculateSum(numbers));
+        
+        String name = null;
+        int length = name.length();
+        System.out.println("Name Length: " + length);
+        
+        double result = calculateAverage(10, 0);
+        System.out.println("Average: " + result);
+        
+        int[] array = {1, 2, 3};
+        int element = array[3];
+        System.out.println("Element: " + element);
+        
+        String text = "This is a sample text";
+        String substring = text.substring(5, 2);
+        System.out.println("Substring: " + substring);
     }
     
-    undeclaredVariable = 42; // Error 5: Undeclared variable
+    public static int calculateSum(int[] numbers) {
+        int sum = 0;
+        for (int i = 1; i <= numbers.length; i++) {
+            sum += numbers[i];
+        }
+        return sum;
+    }
     
-    return 0;
+    public static double calculateAverage(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException("Division by zero");
+        }
+        return a / b;
+    }
 }
+
