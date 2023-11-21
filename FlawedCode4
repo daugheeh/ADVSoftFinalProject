@@ -1,34 +1,33 @@
-#include <iostream>
-
-int main() {
-    int num1 = 10;
-    int num2 = 0;
-    
-    std::cout << "Enter a number: ";
-    std::cin >> num1;
-    
-    std::cout << "Enter another number: ";
-    std::cin >> num2;
-    
-    int result = num1 / num2; // Error 1: Division by zero
-    
-    std::cout << "Result: " << result << std::endl;
-    
-    int array[7];
-    array[-1] = 42; // Error 2: Negative index
-    
-    char* str = "Hello, World!"; // Error 3: Should be "const char* str"
-    
-    int* ptr = nullptr;
-    *ptr = 100; // Error 4: Dereferencing a nullptr
-    
-    for (int i = 0; i < 30; i++) {
-        std::cout << "Loop iteration: " << i << std::endl;
+public class FlawedCode4 {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+        
+        System.out.println("Average: " + calculateAverage(numbers));
+        
+        String text = "Hello, World";
+        char lastChar = text.charAt(text.length());
+        System.out.println("Last Character: " + lastChar);
+        
+        int[] emptyArray = new int[0];
+        int firstElement = emptyArray[0];
+        System.out.println("First Element: " + firstElement);
+        
+        double x = 10.0;
+        int y = 3;
+        double result = x / y;
+        System.out.println("Result: " + result);
+        
+        String[] names = {"Alice", "Bob", "Charlie"};
+        for (int i = 0; i < names.length(); i++) {
+            System.out.println(names[i]);
+        }
     }
     
-    int a = 10;
-    int b = 0;
-    int c = a / b; // Error 5: Division by zero
-    
-    return 0;
+    public static double calculateAverage(int[] numbers) {
+        int sum = 0;
+        for (int i = 0; i <= numbers.length; i++) {
+            sum += numbers[i];
+        }
+        return sum / numbers.length;
+    }
 }
