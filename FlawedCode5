@@ -1,0 +1,34 @@
+#include <iostream>
+
+int main() {
+    int num1 = 10;
+    int num2 = 0;
+    
+    std::cout << "Enter a number: ";
+    std::cin >> num1;
+    
+    std::cout << "Enter another number: ";
+    std::cin >> num2;
+    
+    int result = num1 / num2; // Error 1: Division by zero
+    
+    std::cout << "Result: " << result << std::endl;
+    
+    int array[4];
+    array[4] = 42; // Error 2: Index out of bounds
+    
+    char* str = "Hello, World!"; // Error 3: Should be "const char* str"
+    
+    int* ptr = nullptr;
+    *ptr = 100; // Error 4: Dereferencing a nullptr
+    
+    for (int i = 0; i < 35; i++) {
+        std::cout << "Loop iteration: " << i << std::endl;
+    }
+    
+    int x = 5;
+    int y = 0;
+    int z = x / y; // Error 5: Division by zero
+    
+    return 0;
+}
