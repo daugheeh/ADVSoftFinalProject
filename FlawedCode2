@@ -1,0 +1,32 @@
+#include <iostream>
+
+int main() {
+    int num1 = 10;
+    int num2 = 0;
+    
+    std::cout << "Enter a number: ";
+    std::cin >> num1;
+    
+    std::cout << "Enter another number: ";
+    std::cin >> num2;
+    
+    int result = num1 / num2; // Error 1: Division by zero
+    
+    std::cout << "Result: " << result << std::endl;
+    
+    int array[5];
+    array[6] = 42; // Error 2: Index out of bounds
+    
+    char* str = "Hello, World!"; // Error 3: Should be "const char* str"
+    
+    int* ptr = nullptr;
+    *ptr = 100; // Error 4: Dereferencing a nullptr
+    
+    for (int i = 0; i < 20; i++) {
+        std::cout << "Loop iteration: " << i << std::endl;
+    }
+    
+    undeclaredVariable = 42; // Error 5: Undeclared variable
+    
+    return 0;
+}
