@@ -1,4 +1,4 @@
-public class Main {
+public class FlawedCode1 {
     public static void main(String[] args) {
         int num1 = 10;
         int num2 = 0;
