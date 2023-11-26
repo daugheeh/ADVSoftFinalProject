@@ -22,7 +22,7 @@ public class FlawedCode5 {
         int result = x % y;
         System.out.println("Result: " + result);
         
-        double pi = Math.pi;
+        double pi = Math.PI;
         System.out.println("Pi: " + pi);
     }
     
